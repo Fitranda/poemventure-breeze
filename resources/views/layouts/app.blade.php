@@ -15,7 +15,12 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+        <div class="min-h-screen bg-gray-100 dark:bg-gray-900" style="
+            background-image: url('{{ url('img/gambar1.jpg') }}');
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+        ">
             @include('layouts.navigation')
 
             <!-- Page Heading -->

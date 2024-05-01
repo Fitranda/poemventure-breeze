@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Poemventure</title>
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css" >
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -15,7 +15,9 @@
 </head>
 <body class="container" style="
   background-image: url('{{ url('img/gambar1.jpg') }}');
-  background-size: cover; /* Adjust as needed (cover, contain, etc.) */
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 ">
 <div>
     <span class="centered-text">Poemventure</span>
