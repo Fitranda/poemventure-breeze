@@ -41,3 +41,108 @@
     background-image: linear-gradient(to bottom, #f04511, #cf7f43);
     text-decoration: none;
   }
+
+  .btn-danger {
+    position: absolute; /* Position the text absolutely */
+    background: #ee5d0b;
+    background-image: -webkit-linear-gradient(top, #e3dcd9, #f7c127);
+    background-image: -moz-linear-gradient(top, #e3dcd9, #f7c127);
+    background-image: -ms-linear-gradient(top, #e3dcd9, #f7c127);
+    background-image: -o-linear-gradient(top, #e3dcd9, #f7c127);
+    background-image: linear-gradient(to bottom, #e3dcd9, #f7c127);
+    -webkit-border-radius: 13;
+    -moz-border-radius: 13;
+    border-radius: 13px;
+    -webkit-box-shadow: 0px 1px 3px #666666;
+    -moz-box-shadow: 0px 1px 3px #666666;
+    box-shadow: 0px 1px 3px #666666;
+    font-family: Georgia;
+    color: #000000;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+
+  .btn-dooms {
+    position: absolute; /* Position the text absolutely */
+    background: #fbf3f3;
+    background-image: -webkit-linear-gradient(top, #fbf3f3, #b0c476);
+    background-image: -moz-linear-gradient(top, #fbf3f3, #b0c476);
+    background-image: -ms-linear-gradient(top, #fbf3f3, #b0c476);
+    background-image: -o-linear-gradient(top, #fbf3f3, #b0c476);
+    background-image: linear-gradient(to bottom, #fbf3f3, #b0c476);
+    -webkit-border-radius: 13;
+    -moz-border-radius: 13;
+    border-radius: 13px;
+    -webkit-box-shadow: 0px 1px 3px #666666;
+    -moz-box-shadow: 0px 1px 3px #666666;
+    box-shadow: 0px 1px 3px #666666;
+    font-family: Georgia;
+    color: #000000;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+
+  .btn-nature {
+    position: absolute; /* Position the text absolutely */
+    background: #8ca21f;
+    background-image: -webkit-linear-gradient(top, #f9fb81, #8ca21f);
+    background-image: -moz-linear-gradient(top, #f9fb81, #8ca21f);
+    background-image: -ms-linear-gradient(top, #f9fb81, #8ca21f);
+    background-image: -o-linear-gradient(top, #f9fb81, #8ca21f);
+    background-image: linear-gradient(to bottom, #f9fb81, #8ca21f);
+    -webkit-border-radius: 13;
+    -moz-border-radius: 13;
+    border-radius: 13px;
+    -webkit-box-shadow: 0px 1px 3px #666666;
+    -moz-box-shadow: 0px 1px 3px #666666;
+    box-shadow: 0px 1px 3px #666666;
+    font-family: Georgia;
+    color: #000000;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+
+  .btn-sea   {
+    position: absolute; /* Position the text absolutely */
+    background: #6665e5;
+    background-image: -webkit-linear-gradient(top, #6665e5, #e2ece7);
+    background-image: -moz-linear-gradient(top, #6665e5, #e2ece7);
+    background-image: -ms-linear-gradient(top, #6665e5, #e2ece7);
+    background-image: -o-linear-gradient(top, #6665e5, #e2ece7);
+    background-image: linear-gradient(to bottom, #6665e5, #e2ece7);
+    -webkit-border-radius: 13;
+    -moz-border-radius: 13;
+    border-radius: 13px;
+    -webkit-box-shadow: 0px 1px 3px #666666;
+    -moz-box-shadow: 0px 1px 3px #666666;
+    box-shadow: 0px 1px 3px #666666;
+    font-family: Georgia;
+    color: #000000;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+
+  .btn-dwarf {
+    position: absolute; /* Position the text absolutely */
+    background: #d5cbc1;
+    background-image: -webkit-linear-gradient(top, #325eb2, #d5cbc1);
+    background-image: -moz-linear-gradient(top, #325eb2, #d5cbc1);
+    background-image: -ms-linear-gradient(top, #325eb2, #d5cbc1);
+    background-image: -o-linear-gradient(top, #325eb2, #d5cbc1);
+    background-image: linear-gradient(to bottom, #325eb2, #d5cbc1);
+    -webkit-border-radius: 13;
+    -moz-border-radius: 13;
+    border-radius: 13px;
+    -webkit-box-shadow: 0px 1px 3px #666666;
+    -moz-box-shadow: 0px 1px 3px #666666;
+    box-shadow: 0px 1px 3px #666666;
+    font-family: Georgia;
+    color: #000000;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
