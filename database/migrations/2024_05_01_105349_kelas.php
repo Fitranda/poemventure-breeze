@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('kode_kelas')->unique();
             $table->string('Nama');
+            $table->string('password');
             $table->longText('Deskripsi')->nullable();
             $table->bigInteger('GuruID');
             $table->timestamps();
@@ -25,6 +26,8 @@ return new class extends Migration
             $table->bigInteger('KelasID');
             $table->bigInteger('SiswaID');
             $table->bigInteger('Nilai')->default(0);
+            $table->bigInteger('Darah')->default(100);
+            $table->bigInteger('Level')->default(0);
             $table->timestamps();
         });
 
@@ -50,10 +53,6 @@ return new class extends Migration
             $table->tinyInteger('Jawaban')->comment('Jawaban Siswa (1=A,2=B,3=C,4=D)');
             $table->timestamps();
         });
-
-        Schema::table('users', function (Blueprint $table) {
-            $table->integer('darah')->after('roleid')->default(100);
-        });
     }
 
     /**
@@ -61,9 +60,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('darah');
-        });
         Schema::dropIfExists('SoalDetail');
         Schema::dropIfExists('Soal');
         Schema::dropIfExists('KelasDetail');

@@ -49,6 +49,6 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect(route('dashboard', absolute: false));
+        return ($request->role == 1)? redirect(route('dashboard', absolute: false)):redirect(route('dashboardsiswa', absolute: false));
     }
 }
