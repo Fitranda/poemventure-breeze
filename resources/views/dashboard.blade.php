@@ -1,4 +1,8 @@
 <x-app-layout>
+    <audio autoplay loop>
+        <source src="{{ asset('audio/dash.mp3') }}" type="audio/mpeg">
+    </audio>
+
     <span class="centered-text">Selamat Datang {{ Auth::user()->name }}</span>
     <a href="{{ route('kelasguru') }}" class="btn-custom" style="transform: translate(-150%, 100%);">Kelas</a>
     <a href="{{ route('register') }}" class="btn-custom" style="transform: translate(40%, 100%);">Laporan</a>
