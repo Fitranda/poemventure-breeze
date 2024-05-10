@@ -14,5 +14,6 @@ class Kelas extends Model
         'Deskripsi',
         'password',
         'GuruID',
+        'cekpw',
     ];
 }
