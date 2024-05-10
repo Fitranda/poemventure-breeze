@@ -38,15 +38,16 @@ Route::middleware('auth')->group(function () {
     // Siswa Kelas
     Route::get('/soal/{id}', [SoalController::class, 'show'])->name('soal');
     Route::get('/tambah/{id}', [SoalController::class, 'create'])->name('soal.crete');
+    Route::get('/siswasoal/{id}', [SoalController::class, 'soalSiswa'])->name('soal.siswa');
     Route::post('/tambahsoal', [SoalController::class, 'store'])->name('soal.store');
 
-    Route::get('/map', function () {
-        return view('maps');
-    });
+    Route::get('/map/{id}', function ($id) {
+        return view('maps', ['id' => $id]);
+    })->name('map');
 
     Route::get('/bab', function () {
         return view('bab');
-    });
+    })->name('bab');
 
     Route::get('/story', function () {
         return view('story');
