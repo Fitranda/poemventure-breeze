@@ -47,6 +47,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/bab', function () {
         return view('bab');
     });
+
+    Route::get('/story', function () {
+        return view('story');
+    });
 });
 
 
