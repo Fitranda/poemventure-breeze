@@ -3,6 +3,7 @@
 use App\Http\Controllers\KelasController;
 use App\Http\Controllers\KelasSiswaController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SoalController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -26,11 +27,18 @@ Route::middleware('auth')->group(function () {
     Route::get('/kelasguru', [KelasController::class, 'index'])->name('kelasguru');
     Route::get('/tambahkelasguru', [KelasController::class, 'create'])->name('tambahkelasguru');
     Route::post('/tambahkelasguru', [KelasController::class, 'store'])->name('kelasguru.store');
+    Route::post('/editkelasguru', [KelasController::class, 'update'])->name('kelasguru.update');
+    Route::get('/detailkelasguru/{id}',[KelasController::class, 'show'])->name('detailkelasguru');
 
     // Siswa Kelas
     Route::get('/kelassiswa', [KelasSiswaController::class, 'index'])->name('kelassiswa');
     Route::get('/tambahkelassiswa', [KelasSiswaController::class, 'create'])->name('tambahkelassiswa');
     Route::post('/tambahkelassiswa', [KelasSiswaController::class, 'store'])->name('kelassiswa.store');
+
+    // Siswa Kelas
+    Route::get('/soal/{id}', [SoalController::class, 'show'])->name('soal');
+    Route::get('/tambah/{id}', [SoalController::class, 'create'])->name('soal.crete');
+    Route::post('/tambahsoal', [SoalController::class, 'store'])->name('soal.store');
 
     Route::get('/map', function () {
         return view('maps');
