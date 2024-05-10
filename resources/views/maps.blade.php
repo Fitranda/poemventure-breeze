@@ -3,11 +3,12 @@
         <source src="{{ asset('audio/sound.mp3') }}" type="audio/mpeg">
     </audio>
 
-    <a href="{{ route('kelasguru') }}" class="btn-custom" style="transform: translate(-400%, 200%);">BAB I</a>
-    <a href="{{ route('register') }}" class="btn-custom" style="transform: translate(-200%, 200%);">BAB II</a>
-    <a href="{{ route('register') }}" class="btn-custom" style="transform: translate(-20%, 0%)">BAB III</a>
-    <a href="{{ route('register') }}" class="btn-custom" style="transform: translate(400%, 100%)">BAB IV</a>
-    <a href="{{ route('register') }}" class="btn-custom" style="transform: translate(300%, 300%)">BAB V</a>
+    {{-- <a href="{{ route('soal.siswa',['id'=>$id]) }}" class="btn-custom" style="transform: translate(-400%, 200%);">BAB I</a> --}}
+    <a href="{{ route('bab') }}" class="btn-custom" style="transform: translate(-400%, 200%);">BAB I</a>
+    <a href="{{ route('bab') }}" class="btn-custom" style="transform: translate(-200%, 200%);">BAB II</a>
+    <a href="{{ route('bab') }}" class="btn-custom" style="transform: translate(-20%, 0%)">BAB III</a>
+    <a href="{{ route('bab') }}" class="btn-custom" style="transform: translate(400%, 100%)">BAB IV</a>
+    <a href="{{ route('bab') }}" class="btn-custom" style="transform: translate(300%, 300%)">BAB V</a>
     {{-- <a href="{{ route('register') }}" class="btn-custom" style="">SHOP</a> --}}
     @Once('scripts')
         <script>
