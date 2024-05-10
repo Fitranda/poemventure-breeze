@@ -55,15 +55,18 @@ class KelasController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        return redirect(route('kelasguru'));
+        return redirect(route('kelasguru'))->with('success', 'Kelas berhasil ditambahkan.');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Kelas $kelas)
+    public function show($id)
     {
-        //
+        $data_kelas = DB::table('kelas')->where('id',$id )->first();
+        $data_detail = DB::table('kelasdetail')->where('KelasID',$id)->get();
+        $data_soal = DB::table('soal')->where('KelasID',$id)->get();
+        return view('Guru.DetailKelas', ['kelas'=>$data_kelas,'detail'=>$data_detail,'soal'=>$data_soal]);
     }
 
     /**
@@ -77,9 +80,35 @@ class KelasController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Kelas $kelas)
+    public function update(Request $request)
     {
-        //
+        if ($request->cekpw == 1) {
+            $request->validate([
+                'Nama' => ['required', 'string', 'max:255'],
+                'Deskripsi' => ['required', 'string'],
+                'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            ]);
+            $post = Kelas::findOrFail($request->id);
+
+            // Melakukan pembaruan data
+            $post->Nama = $request->Nama;
+            $post->Deskripsi = $request->Deskripsi;
+            $post->password = Hash::make($request->password);
+            $post->save();
+        }else{
+            $request->validate([
+                'Nama' => ['required', 'string', 'max:255'],
+                'Deskripsi' => ['required', 'string'],
+            ]);
+            $post = Kelas::findOrFail($request->id);
+
+            // Melakukan pembaruan data
+            $post->Nama = $request->Nama;
+            $post->Deskripsi = $request->Deskripsi;
+            $post->save();
+        }
+        return redirect(route('kelasguru'))->with('success', 'Kelas berhasil diperbarui.');
+
     }
 
     /**
