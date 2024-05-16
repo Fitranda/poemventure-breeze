@@ -52,6 +52,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/story', function () {
         return view('story');
     });
+
+    Route::get('/prof', function () {
+        return view('profiles');
+    });
 });
 
 
