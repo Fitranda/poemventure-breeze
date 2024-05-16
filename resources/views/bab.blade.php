@@ -1,7 +1,7 @@
 <x-body-layout>
     <div class="relative overflow-hidden mx-auto">
         <img src="{{ asset('img/paper.png') }}" class="mx-auto opacity-55 object-cover" style="width: 95pc; height: 42pc" alt="">
-        <textarea name="" id="" class="absolute inset-0 mx-auto text-center bg-transparent border-none  " style="width: 65%; height: 80%; top: 50%; transform: translateY(-50%);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ex possimus a itaque inventore perspiciatis cumque quis voluptatem laborum optio quasi, similique doloribus? Labore perferendis, dolore commodi nemo distinctio repellat?</textarea>
+        <textarea name="" id="" class="absolute inset-0 mx-auto text-center bg-transparent border-none  line-clamp-1" style="width: 65%; height: 80%; top: 50%; transform: translateY(-50%);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ex possimus a itaque inventore perspiciatis cumque quis voluptatem laborum optio quasi, similique doloribus? Labore perferendis, dolore commodi nemo distinctio repellat?</textarea>
     </div>
     <div class="relative mx-auto">
         <div class="absolute bottom-0 left-0 right-0 mx-auto text-center">
