@@ -18,10 +18,12 @@ class KelasSiswaController extends Controller
      */
     public function index()
     {
-        $data = DB::table('kelas')
-                ->leftJoin('kelasdetail', 'kelas.id', '=', 'kelasdetail.KelasID')
-                ->where('kelasdetail.SiswaID',Auth::user()->id )
-                ->get();
+        // $data = DB::table('kelas')
+        //         ->leftJoin('kelasdetail', 'kelas.id', '=', 'kelasdetail.KelasID')
+        //         ->where('kelasdetail.SiswaID',Auth::user()->id )
+        //         ->get();
+                // var_dump($data);die;
+        $data = Kelas::getdataKelas();
         return view('Siswa.kelas', ['data'=>$data]);
     }
 

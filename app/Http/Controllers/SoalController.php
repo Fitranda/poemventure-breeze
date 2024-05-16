@@ -87,7 +87,9 @@ class SoalController extends Controller
     }
 
     public function soalSiswa($id){
-        $data = DB::table('soal')->where('KelasID',$id )->get();
+        // $data = DB::table('soal')->where('KelasID',$id )->get();
+        $data = Kelas::getSoal();
+        // var_dump($data);die;
         return view('Siswa.FormSoal', ['id'=>$id, 'data'=>$data]);
     }
 }
