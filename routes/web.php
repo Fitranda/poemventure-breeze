@@ -53,7 +53,7 @@ Route::middleware('auth')->group(function () {
         return view('story');
     });
 
-    Route::get('/prof', function () {
+    Route::get('/profiles', function () {
         return view('profiles');
     });
 });
