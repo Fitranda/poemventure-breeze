@@ -31,7 +31,7 @@
                     kakekmu yang penuh dengan garis-garis pengalaman, matanya bersinar dengan cahaya
                     yang tak pernah pudar meskipun usianya terus bertambah
                 </p>
-                <a href="#" id="btn-next" nilai="1" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded fixed right-5 bottom-5">
+                <a href="#" id="btn-next" nilai="1" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded fixed right-3 bottom-3">
                     Next
                 </a>
             </div>
