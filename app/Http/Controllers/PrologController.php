@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Soal;
 use Illuminate\Http\Request;
 
 class PrologController extends Controller
@@ -14,25 +15,26 @@ class PrologController extends Controller
         return view('Siswa.prolog',['id' => 1]);
     }
 
-    public function bab2()
+    public function bab2($id)
     {
-        return view('Siswa.bab2',['id' => 1]);
+        return view('Siswa.bab2',['id' => $id]);
     }
-    public function bab3()
+    public function bab3($id)
     {
-        return view('Siswa.bab3',['id' => 1]);
+        return view('Siswa.bab3',['id' => $id]);
     }
-    public function bab4()
+    public function bab4($id)
     {
-        return view('Siswa.bab4',['id' => 1]);
+        return view('Siswa.bab4',['id' => $id]);
     }
-    public function bab5()
+    public function bab5($id)
     {
-        return view('Siswa.bab5',['id' => 1]);
+        return view('Siswa.bab5',['id' => $id]);
     }
-    public function bab1()
+    public function bab1($id)
     {
-        return view('Siswa.bab1',['id' => 1]);
+        $soal = Soal::getSoal1();
+        return view('Siswa.bab1',['id' => $id,'data' => $soal]);
     }
 
     /**
