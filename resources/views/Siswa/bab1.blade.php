@@ -60,7 +60,7 @@ membawamu ke tempat yang terpencil ini?
                         break;
 
                     case "3":
-                        $('#gambar').attr("src", "{{url('img/elara.png')}}");
+                        $('#gambar').attr("src", "{{url('img/Elara.png')}}");
                         $('#gambar').show();
                         $('#charName').text("Elara");
                         $('#cerita').text("Ah, Hutan Ajaib Tirandia. Hutan itu memang penuh dengan misteri dan bahaya. Hanya sedikit yang berani memasukinya, dan lebih sedikit lagi yang kembali. Apa yang kamu ketahui tentang pusaka ini?");
@@ -74,7 +74,7 @@ membawamu ke tempat yang terpencil ini?
                         break;
 
                     case "5":
-                        $('#gambar').attr("src", "{{url('img/elara.png')}}");
+                        $('#gambar').attr("src", "{{url('img/Elara.png')}}");
                         $('#gambar').show();
                         $('#charName').text("Elara");
                         $('#cerita').text("Menurut cerita, di dalam kuil tersebut terdapat sebuah logam yang bersinar bahkan dalam kegelapan. Penduduk setempat meletakkannya dalam kuil namun mereka sudah melupakannya selama bertahun-tahun. Di dalam kuil, kau akan menemukan sebuah teka-teki yang rumit. Hanya mereka yang memiliki ketekunan dan kecerdasan yang bisa memecahkannya. Ingatlah, setiap langkah yang kau ambil membawamu lebih dekat pada pecahan pertama dari pusaka yang bersinar. Tetaplah berani dan waspada, ");
