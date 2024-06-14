@@ -17,19 +17,23 @@ class PrologController extends Controller
 
     public function bab2($id)
     {
-        return view('Siswa.bab2',['id' => $id]);
+        $soal = Soal::getSoal2();
+        return view('Siswa.bab2',['id' => $id,'data' => $soal]);
     }
     public function bab3($id)
     {
-        return view('Siswa.bab3',['id' => $id]);
+        $soal = Soal::getSoal3();
+        return view('Siswa.bab3',['id' => $id,'data' => $soal]);
     }
     public function bab4($id)
     {
-        return view('Siswa.bab4',['id' => $id]);
+        $soal = Soal::getSoal4();
+        return view('Siswa.bab4',['id' => $id,'data' => $soal]);
     }
     public function bab5($id)
     {
-        return view('Siswa.bab5',['id' => $id]);
+        $soal = Soal::getSoal5();
+        return view('Siswa.bab5',['id' => $id,'data' => $soal]);
     }
     public function bab1($id)
     {

@@ -99,4 +99,87 @@ class Soal extends Model
         return $array;
 
     }
+
+    public static function getSoal2(){
+        $collection = collect([
+            (object)[
+                "id" => 1,
+                "KelasID" => 1,
+                "BAB" => 2,
+                "no_soal" => 1,
+                "Soal" => " Puisi tersusun atas apa?",
+                "jawaban1" => "Paragraf",
+                "jawaban2" => "Bait-bait",
+                "jawaban3" => "Kalimat ",
+                "jawaban4" => " Bab",
+                "Kunci_Jawaban" => 2,
+                "Alasan" => "Puisi adalah bentuk karya sastra yang terdiri dari bait-bait. Setiap bait biasanya terdiri dari beberapa baris yang membentuk satu kesatuan makna dan emosi."
+            ],
+            (object)[
+                "id" => 2,
+                "KelasID" => 1,
+                "BAB" => 2,
+                "no_soal" => 2,
+                "Soal" => "Apa yang digunakan penyair untuk memperkuat makna dan membangkitkan imajinasi pembaca? ",
+                "jawaban1" => "Kata-kata sederhana ",
+                "jawaban2" => "Gaya bahasa",
+                "jawaban3" => "Diksi yang indah",
+                "jawaban4" => "Narasi",
+                "Kunci_Jawaban" => 3,
+                "Alasan" => "Penyair memilih kata-kata yang indah dan kiasan untuk memperkuat makna dan membangkitkan imajinasi pembaca",
+                "created_at" => NULL,
+                "updated_at" => NULL
+            ],
+            (object)[
+                "id" => 3,
+                "KelasID" => 1,
+                "BAB" => 2,
+                "no_soal" => 3,
+                "Soal" => "Puisi memiliki apa yang teratur, menghasilkan bunyi yang merdu dan mudah diingat?",
+                "jawaban1" => "Tema dan pesan",
+                "jawaban2" => "Irama dan rima",
+                "jawaban3" => "Gaya dan nada ",
+                "jawaban4" => "Struktur dan format ",
+                "Kunci_Jawaban" => 2,
+                "Alasan" => " Irama dan rima adalah elemen penting dalam puisi yang memberikan struktur teratur dan ritme, sehingga membuat puisi terdengar merdu dan mudah diingat.",
+                "created_at" => NULL,
+                "updated_at" => NULL
+            ],
+            (object)[
+                "id" => 4,
+                "KelasID" => 1,
+                "BAB" => 2,
+                "no_soal" => 4,
+                "Soal" => "Pesan dan makna yang disampaikan oleh puisi umumnya bagaimana?",
+                "jawaban1" => "Sederhana",
+                "jawaban2" => "Biasa saja",
+                "jawaban3" => "Mendalam",
+                "jawaban4" => "Tidak jelas",
+                "Kunci_Jawaban" => 3,
+                "Alasan" => " Puisi sering kali menyampaikan pesan dan makna yang mendalam, menggunakan bahasa yang padat dan penuh nuansa.",
+                "created_at" => NULL,
+                "updated_at" => NULL
+            ],
+            (object)[
+                "id" => 5,
+                "KelasID" => 1,
+                "BAB" => 2,
+                "no_soal" => 5,
+                "Soal" => "Berapa baris biasanya terdapat dalam satu bait puisi?",
+                "jawaban1" => "Satu baris",
+                "jawaban2" => "Dua baris",
+                "jawaban3" => "Tiga baris",
+                "jawaban4" => "Beberapa baris",
+                "Kunci_Jawaban" => 4,
+                "Alasan" => "  Satu bait dalam puisi biasanya terdiri dari beberapa baris, tidak terbatas pada satu, dua, atau tiga baris, dan jumlahnya bervariasi tergantung pada bentuk puisi.",
+                "created_at" => NULL,
+                "updated_at" => NULL
+            ]
+        ]);
+
+        $array = $collection->toArray();
+
+        return $array;
+
+    }
 }
