@@ -6,7 +6,7 @@
             <div id="materi" class="w-[80%] m-auto p-4 md:p-6 hidden">
                 <div id="bag-1" class="hidden">
                     <p class="text-2xl font-bold mb-2">
-                        pengertian puisi
+                        Pengertian Puisi
                     </p>
                     <p class="text-lg leading-relaxed mb-3">
                         Puisi adalah cara manusia mengekspresikan diri mereka dengan kata-kata yang penuh makna dan emosi. Sejak zaman kuno hingga saat ini, puisi telah menjadi cermin dari beragam pengalaman manusia: kegembiraan, kesedihan, cinta, kehilangan, dan banyak lagi. Ketika seseorang menulis atau membaca puisi, mereka terhubung dengan aspek-aspek yang paling mendalam dari kemanusiaan kita.
@@ -14,7 +14,7 @@
                 </div>
                 <div id="bag-2" class="hidden">
                     <p class="text-2xl font-bold mb-2">
-                        sejarah puisi
+                        Sejarah Puisi
                     </p>
                     <p class="text-lg leading-relaxed mb-3">
                         Sejarah puisi adalah cerita tentang bagaimana manusia berbagi cerita, impian, dan kebijaksanaan melalui kata-kata yang terpilih dengan hati-hati. Dari kisah-kisah epik zaman kuno hingga puisi modern yang inovatif, setiap karya puisi merupakan ungkapan kehidupan yang unik, dan setiap pembaca atau pendengar menemukan makna yang berbeda dalam setiap bait dan barisnya.
@@ -22,7 +22,7 @@
                 </div>
                 <div id="bag-3" class="hidden">
                     <p class="text-2xl font-bold mb-2">
-                        fungsi puisi
+                        Fungsi Puisi
                     </p>
                     <p class="text-lg leading-relaxed mb-3">
                         Puisi adalah jendela ke dalam pikiran, perasaan, dan pengalaman manusia. Saat kita membaca atau menulis puisi, kita merasakan kekuatan kata-kata untuk menghibur, menginspirasi, atau mengubah kita. Melalui puisi, kita berbagi kehidupan kita dengan cara yang paling intim dan universal, karena setiap bait puisi adalah suara dari hati manusia
@@ -50,9 +50,7 @@
             <!-- Main container div: holds the entire content of the footer, including four sections (TW Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. -->
             <div class="mx-6 py-10 text-center md:text-left">
                 <p id="cerita" class="text-lg font-bold text-white leading-relaxed mb-4" id="dialogue">
-                    Selamat datang di desa kami, pengembara. Namaku Elara. Apa yang
-membawamu ke tempat yang terpencil ini?
-
+                    Selamat datang di desa kami, pengembara. Namaku Elara. Apa yang membawamu ke tempat yang terpencil ini?
                 </p>
                 <a href="#" id="btn-next" nilai="1" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded fixed right-5 bottom-5">
                     Next
@@ -60,6 +58,7 @@ membawamu ke tempat yang terpencil ini?
             </div>
             </footer>
         </main>
+
         <div id="soal" class="hidden flex flex-col sm:justify-center items-center">
             <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
                 <form method="GET" id="formsoal" action="{{route('map',['id'=>1])}}">

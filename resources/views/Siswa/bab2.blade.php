@@ -6,13 +6,13 @@
             <div id="materi" class="w-[80%] m-auto p-4 md:p-6 hidden">
                 <div id="bag-1" class="hidden">
                     <p class="text-2xl font-bold mb-2">
-                        Ciri-ciri Puisi
+                        Ciri-Ciri Puisi
                     </p>
                     <p class="text-lg leading-relaxed mb-3">
                         Berbentuk bait-bait: Puisi tersusun atas bait-bait yang terdiri dari beberapa baris.
-Menggunakan diksi yang indah: Penyair memilih kata-kata yang indah dan kiasan untuk memperkuat makna dan membangkitkan imajinasi pembaca.
-Memiliki irama dan rima: Puisi memiliki irama dan rima yang teratur, menghasilkan bunyi yang merdu dan mudah diingat.
-Memiliki makna yang mendalam: Puisi mengandung pesan dan makna yang ingin disampaikan penyair kepada pembaca.
+                        Menggunakan diksi yang indah: Penyair memilih kata-kata yang indah dan kiasan untuk memperkuat makna dan membangkitkan imajinasi pembaca.
+                        Memiliki irama dan rima: Puisi memiliki irama dan rima yang teratur, menghasilkan bunyi yang merdu dan mudah diingat.
+                        Memiliki makna yang mendalam: Puisi mengandung pesan dan makna yang ingin disampaikan penyair kepada pembaca.
                     </p>
                 </div>
                 <div id="bag-2" class="hidden">
@@ -41,9 +41,7 @@ Memiliki makna yang mendalam: Puisi mengandung pesan dan makna yang ingin disamp
             <!-- Main container div: holds the entire content of the footer, including four sections (TW Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. -->
             <div class="mx-6 py-10 text-center md:text-left">
                 <p id="cerita" class="text-lg font-bold text-white leading-relaxed mb-4" id="dialogue">
-                    Selamat datang di desa kami, pengembara. Namaku Elara. Apa yang
-membawamu ke tempat yang terpencil ini?
-
+                    Selamat datang di desa kami, pengembara. Namaku Elara. Apa yang membawamu ke tempat yang terpencil ini?
                 </p>
                 <a href="#" id="btn-next" nilai="1" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded fixed right-5 bottom-5">
                     Next
@@ -51,6 +49,7 @@ membawamu ke tempat yang terpencil ini?
             </div>
             </footer>
         </main>
+
         <div id="soal" class="hidden flex flex-col sm:justify-center items-center">
             <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
                 <form method="GET" id="formsoal" action="{{route('map',['id'=>1])}}">
@@ -124,6 +123,7 @@ membawamu ke tempat yang terpencil ini?
             </div>
         </div>
     </div>
+    
     @Once('scripts')
         <script>
             $(document).ready(function() {

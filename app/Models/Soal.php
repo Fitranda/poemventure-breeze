@@ -182,4 +182,328 @@ class Soal extends Model
         return $array;
 
     }
+
+    public static function getSoal3(){
+        $collection = collect([
+            (object)[
+                "id" => 1,
+                "KelasID" => 1,
+                "BAB" => 3,
+                "no_soal" => 1,
+                "Soal" => "Jenis puisi lama yang terdiri atas 4 baris dengan rima AA-AA, BB-BB, CC-CC, atau DD-DD adalah?",
+                "jawaban1" => "Pantun",
+                "jawaban2" => "Syair",
+                "jawaban3" => "Gurindam",
+                "jawaban4" => "Talibun",
+                "Kunci_Jawaban" => 2,
+                "Alasan" => "Syair adalah puisi lama yang terdiri atas 4 baris dalam setiap baitnya dengan rima yang biasanya a-a-a-a. Setiap baris syair biasanya memiliki makna yang saling berkaitan."
+            ],
+            (object)[
+                "id" => 2,
+                "KelasID" => 1,
+                "BAB" => 3,
+                "no_soal" => 2,
+                "Soal" => "Jenis puisi yang bercerita tentang kisah kepahlawanan atau tragedi adalah",
+                "jawaban1" => "Balada",
+                "jawaban2" => "Soneta ",
+                "jawaban3" => "Roman ",
+                "jawaban4" => "Lagu ",
+                "Kunci_Jawaban" => 1,
+                "Alasan" => "Balada adalah jenis puisi naratif yang menceritakan kisah kepahlawanan, tragedi, atau cerita dramatis lainnya. Biasanya ditulis dalam bentuk bait dengan ritme dan rima yang khas.",
+                "created_at" => NULL,
+                "updated_at" => NULL
+            ],
+            (object)[
+                "id" => 3,
+                "KelasID" => 1,
+                "BAB" => 3,
+                "no_soal" => 3,
+                "Soal" => "Jenis puisi lama yang terdiri atas 2 baris atau lebih dengan rima A-A, B-B, C-C, dst. adalah",
+                "jawaban1" => "Syair ",
+                "jawaban2" => "Talibun ",
+                "jawaban3" => "Gurindam ",
+                "jawaban4" => "Masnawi  ",
+                "Kunci_Jawaban" => 3,
+                "Alasan" => "Gurindam adalah puisi lama yang terdiri dari dua baris dalam setiap baitnya dengan rima yang bersajak sama (A-A, B-B, C-C, dan seterusnya). Setiap baitnya mengandung nasihat atau petuah.",
+                "created_at" => NULL,
+                "updated_at" => NULL
+            ],
+            (object)[
+                "id" => 4,
+                "KelasID" => 1,
+                "BAB" => 3,
+                "no_soal" => 4,
+                "Soal" => " Jenis puisi yang terdiri atas 14 baris dengan rima tertentu adalah:",
+                "jawaban1" => "Balada ",
+                "jawaban2" => "Soneta ",
+                "jawaban3" => "Roman",
+                "jawaban4" => "Lagu",
+                "Kunci_Jawaban" => 2,
+                "Alasan" => "Soneta adalah jenis puisi yang terdiri dari 14 baris dengan pola rima tertentu. Biasanya dibagi menjadi dua bagian: oktaf (8 baris) dan sestet (6 baris), dengan pola rima yang beragam seperti abba-abba-cdc-dcd atau abab-cdcd-efef-gg.",
+                "created_at" => NULL,
+                "updated_at" => NULL
+            ],
+            (object)[
+                "id" => 5,
+                "KelasID" => 1,
+                "BAB" => 3,
+                "no_soal" => 5,
+                "Soal" => "Jenis puisi lama yang terdiri atas 5 baris dengan rima AA-ABA atau AB-ABB adalah",
+                "jawaban1" => "Pantun",
+                "jawaban2" => "Syair",
+                "jawaban3" => "Talibun",
+                "jawaban4" => "Masnawi",
+                "Kunci_Jawaban" => 4,
+                "Alasan" => "Masnawi adalah puisi naratif yang terdiri dari bait-bait yang biasanya berisi 5 baris dengan pola rima AA-ABA atau AB-ABB. Puisi ini sering digunakan dalam kesusastraan Persia dan Melayu untuk menyampaikan cerita panjang atau epos.",
+                "created_at" => NULL,
+                "updated_at" => NULL
+            ]
+        ]);
+
+        $array = $collection->toArray();
+
+        return $array;
+
+    }
+
+    public static function getSoal4(){
+        $collection = collect([
+            (object)[
+                "id" => 1,
+                "KelasID" => 1,
+                "BAB" => 4,
+                "no_soal" => 1,
+                "Soal" => "Apa yang dimaksud dengan tema dalam unsur puisi?",
+                "jawaban1" => "Pilihan kata yang digunakan penyair",
+                "jawaban2" => "Inti atau pokok bahasan puis",
+                "jawaban3" => "Gambaran yang ditangkap panca indera",
+                "jawaban4" => "Suasana perasaan yang ingin disampaikan penyair",
+                "Kunci_Jawaban" => 2,
+                "Alasan" => "Tema adalah inti atau pokok bahasan yang ingin disampaikan oleh penyair melalui puisinya. Tema menggambarkan ide utama atau pesan yang mendasari seluruh puisi."
+            ],
+            (object)[
+                "id" => 2,
+                "KelasID" => 1,
+                "BAB" => 4,
+                "no_soal" => 2,
+                "Soal" => "Unsur puisi manakah yang menggambarkan pilihan kata yang digunakan oleh penyair?",
+                "jawaban1" => "Imaji",
+                "jawaban2" => "Majas ",
+                "jawaban3" => "Diksi ",
+                "jawaban4" => "Nada ",
+                "Kunci_Jawaban" => 3,
+                "Alasan" => "Diksi adalah pilihan kata yang digunakan oleh penyair dalam puisinya. Pemilihan kata ini sangat penting untuk menyampaikan makna, suasana, dan nada yang diinginkan.",
+                "created_at" => NULL,
+                "updated_at" => NULL
+            ],
+            (object)[
+                "id" => 3,
+                "KelasID" => 1,
+                "BAB" => 4,
+                "no_soal" => 3,
+                "Soal" => "Apa yang dimaksud dengan rima dalam puisi?",
+                "jawaban1" => "Persamaan bunyi di akhir baris puisi ",
+                "jawaban2" => "Alunan bunyi yang dihasilkan dari susunan kata dalam puisi ",
+                "jawaban3" => "Baris dalam puisi ",
+                "jawaban4" => "Sekelompok baris dalam puisi  ",
+                "Kunci_Jawaban" => 1,
+                "Alasan" => "Rima adalah persamaan bunyi yang terdapat di akhir baris puisi. Rima dapat memberikan ritme dan musikalitas pada puisi, serta memperindah bunyi keseluruhan puisi.",
+                "created_at" => NULL,
+                "updated_at" => NULL
+            ],
+            (object)[
+                "id" => 4,
+                "KelasID" => 1,
+                "BAB" => 4,
+                "no_soal" => 4,
+                "Soal" => "Bagaimana majas digunakan dalam puisi?",
+                "jawaban1" => "Untuk menyampaikan pesan atau pelajaran ",
+                "jawaban2" => "Untuk menggambarkan suasana perasaan ",
+                "jawaban3" => "Untuk memperindah makna dengan bahasa kiasan",
+                "jawaban4" => "Untuk menciptakan alunan bunyi yang harmonis",
+                "Kunci_Jawaban" => 3,
+                "Alasan" => "Majas adalah penggunaan bahasa kiasan atau figuratif untuk memperindah dan memperkuat makna dalam puisi. Majas membantu penyair menyampaikan perasaan, gambaran, atau pesan dengan cara yang lebih kreatif dan menarik.",
+                "created_at" => NULL,
+                "updated_at" => NULL
+            ],
+            (object)[
+                "id" => 5,
+                "KelasID" => 1,
+                "BAB" => 4,
+                "no_soal" => 5,
+                "Soal" => "Apa yang dimaksud dengan amanat dalam puisi?",
+                "jawaban1" => "Tema atau pokok bahasan puisi",
+                "jawaban2" => "Pesan atau pelajaran yang ingin disampaikan penyair",
+                "jawaban3" => "Suasana perasaan yang ingin disampaikan penyair",
+                "jawaban4" => "Pilihan kata yang digunakan penyair",
+                "Kunci_Jawaban" => 2,
+                "Alasan" => "Amanat adalah pesan atau pelajaran yang ingin disampaikan oleh penyair melalui puisinya. Amanat biasanya merupakan nilai-nilai moral, etika, atau nasihat yang dapat diambil oleh pembaca dari puisi tersebut.",
+                "created_at" => NULL,
+                "updated_at" => NULL
+            ]
+        ]);
+
+        $array = $collection->toArray();
+
+        return $array;
+
+    }
+
+    public static function getSoal5(){
+        $collection = collect([
+            (object)[
+                "id" => 1,
+                "KelasID" => 1,
+                "BAB" => 5,
+                "no_soal" => 1,
+                "Soal" => "Apa definisi puisi menurut paragraf di atas?",
+                "jawaban1" => "Cara manusia mengekspresikan diri mereka dengan kata-kata yang penuh makna dan emosi",
+                "jawaban2" => "Ungkapan kehidupan yang unik melalui prosa.",
+                "jawaban3" => "Penggunaan bahasa yang kompleks dan sulit dipahami.",
+                "jawaban4" => "Cara manusia berbagi cerita dan kebijaksanaan melalui tulisan panjang.",
+                "Kunci_Jawaban" => 1,
+                "Alasan" => "Definisi puisi yang umum adalah cara manusia mengekspresikan diri dengan kata-kata yang penuh makna dan emosi."
+            ],
+            (object)[
+                "id" => 2,
+                "KelasID" => 1,
+                "BAB" => 5,
+                "no_soal" => 2,
+                "Soal" => "Apa yang dimaksud dengan sejarah puisi?",
+                "jawaban1" => "Cerita tentang bagaimana manusia menyanyi dan menari",
+                "jawaban2" => "Evolusi bahasa dalam komunikasi sehari-hari. ",
+                "jawaban3" => "Cerita tentang bagaimana manusia berbagi cerita, impian, dan kebijaksanaan melalui kata-kata yang terpilih dengan hati-hati ",
+                "jawaban4" => "Perkembangan teknologi dalam menulis. ",
+                "Kunci_Jawaban" => 3,
+                "Alasan" => "Sejarah puisi mencakup perkembangan bagaimana manusia menggunakan kata-kata terpilih untuk berbagi cerita, impian, dan kebijaksanaan.",
+                "created_at" => NULL,
+                "updated_at" => NULL
+            ],
+            (object)[
+                "id" => 3,
+                "KelasID" => 1,
+                "BAB" => 5,
+                "no_soal" => 3,
+                "Soal" => "Apa fungsi utama puisi menurut teks di atas?",
+                "jawaban1" => "Mengajarkan ilmu pengetahuan. ",
+                "jawaban2" => "Menyampaikan informasi terkini. ",
+                "jawaban3" => "Menceritakan kisah-kisah lucu. ",
+                "jawaban4" => "Menghibur, menginspirasi, atau mengubah kita melalui kekuatan kata-kata.  ",
+                "Kunci_Jawaban" => 4,
+                "Alasan" => "Fungsi utama puisi adalah menghibur, menginspirasi, atau mengubah melalui kekuatan kata-kata yang penuh makna.",
+                "created_at" => NULL,
+                "updated_at" => NULL
+            ],
+            (object)[
+                "id" => 4,
+                "KelasID" => 1,
+                "BAB" => 5,
+                "no_soal" => 4,
+                "Soal" => "Ciri-ciri puisi berikut ini benar, kecuali:",
+                "jawaban1" => "Berbentuk bait-bait. ",
+                "jawaban2" => "Menggunakan diksi yang indah. ",
+                "jawaban3" => "Tidak memiliki irama dan rima",
+                "jawaban4" => "Memiliki makna yang mendalam.",
+                "Kunci_Jawaban" => 3,
+                "Alasan" => "Puisi sering kali memiliki irama dan rima yang khas. Ciri ini justru salah karena banyak puisi yang memanfaatkan irama dan rima untuk memperkuat makna dan keindahan.",
+                "created_at" => NULL,
+                "updated_at" => NULL
+            ],
+            (object)[
+                "id" => 5,
+                "KelasID" => 1,
+                "BAB" => 5,
+                "no_soal" => 5,
+                "Soal" => "Jenis puisi lama yang terdiri atas 4 baris dengan rima AA-AA disebut:",
+                "jawaban1" => "Pantun",
+                "jawaban2" => "Syair",
+                "jawaban3" => "Gurindam",
+                "jawaban4" => "Talibun",
+                "Kunci_Jawaban" => 2,
+                "Alasan" => "Syair adalah puisi lama yang terdiri dari 4 baris dengan rima yang sama pada setiap barisnya (a-a-a-a).",
+                "created_at" => NULL,
+                "updated_at" => NULL
+            ],
+            (object)[
+                "id" => 6,
+                "KelasID" => 1,
+                "BAB" => 5,
+                "no_soal" => 6,
+                "Soal" => "Puisi modern yang terdiri atas 14 baris dengan rima tertentu adalah:",
+                "jawaban1" => "Balada",
+                "jawaban2" => "Soneta",
+                "jawaban3" => "Roman",
+                "jawaban4" => "Lagu",
+                "Kunci_Jawaban" => 2,
+                "Alasan" => "Soneta adalah bentuk puisi yang terdiri dari 14 baris dengan pola rima tertentu, seperti abab-cdcd-efef-gg atau abba-abba-cdc-dcd.",
+                "created_at" => NULL,
+                "updated_at" => NULL
+            ],
+            (object)[
+                "id" => 7,
+                "KelasID" => 1,
+                "BAB" => 5,
+                "no_soal" => 7,
+                "Soal" => "Unsur puisi yang merupakan pilihan kata yang digunakan penyair disebut:",
+                "jawaban1" => "Tema",
+                "jawaban2" => "Diksi",
+                "jawaban3" => "Imaji",
+                "jawaban4" => "Majas",
+                "Kunci_Jawaban" => 2,
+                "Alasan" => "Diksi adalah pilihan kata yang digunakan oleh penyair dalam puisinya untuk menyampaikan makna dan suasana.",
+                "created_at" => NULL,
+                "updated_at" => NULL
+            ],
+            (object)[
+                "id" => 8,
+                "KelasID" => 1,
+                "BAB" => 5,
+                "no_soal" => 8,
+                "Soal" => "Apa yang dimaksud dengan rima dalam puisi?",
+                "jawaban1" => "Inti atau pokok bahasan puisi.",
+                "jawaban2" => "Gambaran yang ditangkap panca indera",
+                "jawaban3" => "Persamaan bunyi di akhir baris puisi",
+                "jawaban4" => "Suasana perasaan yang ingin disampaikan penyair",
+                "Kunci_Jawaban" => 3,
+                "Alasan" => "Rima adalah persamaan bunyi yang terdapat di akhir baris puisi, yang memberikan ritme dan keindahan bunyi pada puisi.",
+                "created_at" => NULL,
+                "updated_at" => NULL
+            ],
+            (object)[
+                "id" => 9,
+                "KelasID" => 1,
+                "BAB" => 5,
+                "no_soal" => 9,
+                "Soal" => "Puisi yang terdiri dari 2 baris atau lebih dengan rima A-A disebut:",
+                "jawaban1" => "Pantun",
+                "jawaban2" => "Syair",
+                "jawaban3" => "Gurindam",
+                "jawaban4" => "Talibun",
+                "Kunci_Jawaban" => 3,
+                "Alasan" => "Gurindam adalah puisi lama yang terdiri dari dua baris dalam setiap baitnya dengan rima yang bersajak sama (A-A, B-B, C-C, dan seterusnya).",
+                "created_at" => NULL,
+                "updated_at" => NULL
+            ],
+            (object)[
+                "id" => 10,
+                "KelasID" => 1,
+                "BAB" => 5,
+                "no_soal" => 10,
+                "Soal" => "Apa yang ingin disampaikan penyair melalui bait dan baris puisi?",
+                "jawaban1" => "Tema",
+                "jawaban2" => "Amanat",
+                "jawaban3" => "Imaji",
+                "jawaban4" => "Irama",
+                "Kunci_Jawaban" => 2,
+                "Alasan" => "Amanat adalah pesan atau pelajaran yang ingin disampaikan oleh penyair melalui bait dan baris dalam puisinya. Amanat biasanya mengandung nilai-nilai moral atau etika yang dapat diambil oleh pembaca.",
+                "created_at" => NULL,
+                "updated_at" => NULL
+            ]
+        ]);
+
+        $array = $collection->toArray();
+
+        return $array;
+
+    }
 }

@@ -62,9 +62,7 @@ Route::middleware('auth')->group(function () {
         return view('story');
     });
 
-    Route::get('/profiles', function () {
-        return view('profiles');
-    });
+    Route::get('/profiles', [ProfileController::class, 'show'])->name('profile');
 });
 
 

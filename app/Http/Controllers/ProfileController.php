@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Profile;
 use App\Http\Requests\ProfileUpdateRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -11,6 +12,12 @@ use Illuminate\View\View;
 
 class ProfileController extends Controller
 {
+    public function show(): View
+    {
+        $data = Profile::getdataProfile();
+        return view('profiles', ['data'=>$data]);
+    }
+
     /**
      * Display the user's profile form.
      */
