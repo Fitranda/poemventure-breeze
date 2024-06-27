@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Guru;
 use App\Models\Kelas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -19,7 +20,8 @@ class KelasController extends Controller
     {
         $where = ['GuruID'=>Auth::user()->id];
         $data = Kelas::getDataKelasGuru($where);
-        return view('Guru.kelas', ['data'=>$data]);
+        $dataguru = Guru::getDataGuru();
+        return view('Guru.kelas', ['data'=>$data,'dataguru'=>$dataguru]);
     }
 
     /**

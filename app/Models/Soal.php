@@ -528,4 +528,9 @@ class Soal extends Model
         return $array;
 
     }
+
+    public static function getSoal($id,$bab){
+        $data = DB::table('soal')->where(['KelasID'=>$id,'BAB'=>$bab])->get();
+        return $data;
+    }
 }

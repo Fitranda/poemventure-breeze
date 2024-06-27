@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Kelas;
 use App\Models\KelasDetail;
+use App\Models\Siswa;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -19,7 +20,8 @@ class KelasSiswaController extends Controller
     public function tampilkelas()
     {
         $data = Kelas::getdatakelassiswa();
-        return view('Siswa.kelas', ['data'=>$data]);
+        $data_siswa = Siswa::getDataSiswa();
+        return view('Siswa.kelas', ['data'=>$data,'siswa'=>$data_siswa]);
     }
 
     /**
