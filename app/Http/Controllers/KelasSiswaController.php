@@ -16,29 +16,24 @@ class KelasSiswaController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function tampilkelas()
     {
-        // $data = DB::table('kelas')
-        //         ->leftJoin('kelasdetail', 'kelas.id', '=', 'kelasdetail.KelasID')
-        //         ->where('kelasdetail.SiswaID',Auth::user()->id )
-        //         ->get();
-                // var_dump($data);die;
-        $data = Kelas::getdataKelas();
+        $data = Kelas::getdatakelassiswa();
         return view('Siswa.kelas', ['data'=>$data]);
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function tambahkelas()
     {
         return view('Siswa.FormKelas', []);
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newl y created resource in storage.
      */
-    public function store(Request $request)
+    public function simpan(Request $request)
     {
         $kelas = DB::table('kelas')
                 ->where('kode_kelas', $request->kode_kelas)

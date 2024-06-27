@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Soal extends Model
 {
@@ -16,6 +17,27 @@ class Soal extends Model
         'Darah',
         'Level',
     ];
+
+    public static function getDataSoalGuru($where){
+        $data = DB::table('soal')->where($where)->get();
+        return $data;
+    }
+
+    public static function SimpanSoal($request,$x){
+        $data = DB::table('soal')->insert([
+            'KelasID' =>$request->id,
+            'BAB' =>$request->BAB,
+            'no_soal' =>$request->{"no_soal".$x},
+            'Soal' =>$request->{"Soal".$x},
+            'jawaban1' =>$request->{"jawaban1".$x},
+            'jawaban2' =>$request->{"jawaban2".$x},
+            'jawaban3' =>$request->{"jawaban3".$x},
+            'jawaban4' =>$request->{"jawaban4".$x},
+            'Kunci_Jawaban' =>$request->{"Kunci_Jawaban".$x},
+            'Alasan' =>$request->{"Alasan".$x},
+        ]);
+        return $data;
+    }
 
     public static function getSoal1(){
         $collection = collect([

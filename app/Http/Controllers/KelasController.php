@@ -15,16 +15,17 @@ class KelasController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function tampilkelas()
     {
-        $data = DB::table('kelas')->where('GuruID',Auth::user()->id )->get();
+        $where = ['GuruID'=>Auth::user()->id];
+        $data = Kelas::getDataKelasGuru($where);
         return view('Guru.kelas', ['data'=>$data]);
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function tambahkelasguru()
     {
         return view('Guru.FormKelas', []);
     }
@@ -32,7 +33,7 @@ class KelasController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function simpankelasguru(Request $request)
     {
         $request->validate([
             'Nama' => ['required', 'string', 'max:255'],
@@ -47,13 +48,15 @@ class KelasController extends Controller
             $code = Str::random(10);
         }
 
-        Kelas::create([
+        $params =[
             'kode_kelas' => $code,
             'Nama' => $request->Nama,
             'Deskripsi' => $request->Deskripsi,
             'GuruID' => Auth::user()->id,
             'password' => Hash::make($request->password),
-        ]);
+        ];
+
+        Kelas::simpankelasguru($params);
 
         return redirect(route('kelasguru'))->with('success', 'Kelas berhasil ditambahkan.');
     }
@@ -61,12 +64,10 @@ class KelasController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show($id)
+    public function detailkelasguru($id)
     {
-        $data_kelas = DB::table('kelas')->where('id',$id )->first();
-        $data_detail = DB::table('kelasdetail')->where('KelasID',$id)->get();
-        $data_soal = DB::table('soal')->where('KelasID',$id)->get();
-        return view('Guru.DetailKelas', ['kelas'=>$data_kelas,'detail'=>$data_detail,'soal'=>$data_soal]);
+        $data_kelas = Kelas::getDataKelasGuruFirst($id);
+        return view('Guru.DetailKelas', ['kelas'=>$data_kelas]);
     }
 
     /**
@@ -88,24 +89,13 @@ class KelasController extends Controller
                 'Deskripsi' => ['required', 'string'],
                 'password' => ['required', 'confirmed', Rules\Password::defaults()],
             ]);
-            $post = Kelas::findOrFail($request->id);
-
-            // Melakukan pembaruan data
-            $post->Nama = $request->Nama;
-            $post->Deskripsi = $request->Deskripsi;
-            $post->password = Hash::make($request->password);
-            $post->save();
+            Kelas::updateKelasGuru($request);
         }else{
             $request->validate([
                 'Nama' => ['required', 'string', 'max:255'],
                 'Deskripsi' => ['required', 'string'],
             ]);
-            $post = Kelas::findOrFail($request->id);
-
-            // Melakukan pembaruan data
-            $post->Nama = $request->Nama;
-            $post->Deskripsi = $request->Deskripsi;
-            $post->save();
+            Kelas::updateKelasGuru($request);
         }
         return redirect(route('kelasguru'))->with('success', 'Kelas berhasil diperbarui.');
 

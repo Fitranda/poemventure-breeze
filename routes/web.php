@@ -25,22 +25,23 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     // Guru Kelas
-    Route::get('/kelasguru', [KelasController::class, 'index'])->name('kelasguru');
-    Route::get('/tambahkelasguru', [KelasController::class, 'create'])->name('tambahkelasguru');
-    Route::post('/tambahkelasguru', [KelasController::class, 'store'])->name('kelasguru.store');
+    Route::get('/kelasguru', [KelasController::class, 'tampilkelas'])->name('kelasguru');
+    Route::get('/tambahkelasguru', [KelasController::class, 'tambahkelasguru'])->name('tambahkelasguru');
+    Route::post('/tambahkelasguru', [KelasController::class, 'simpankelasguru'])->name('kelasguru.store');
     Route::post('/editkelasguru', [KelasController::class, 'update'])->name('kelasguru.update');
-    Route::get('/detailkelasguru/{id}',[KelasController::class, 'show'])->name('detailkelasguru');
+    Route::get('/detailkelasguru/{id}',[KelasController::class, 'detailkelasguru'])->name('detailkelasguru');
 
     // Siswa Kelas
-    Route::get('/kelassiswa', [KelasSiswaController::class, 'index'])->name('kelassiswa');
-    Route::get('/tambahkelassiswa', [KelasSiswaController::class, 'create'])->name('tambahkelassiswa');
-    Route::post('/tambahkelassiswa', [KelasSiswaController::class, 'store'])->name('kelassiswa.store');
+    Route::get('/kelassiswa', [KelasSiswaController::class, 'tampilkelas'])->name('kelassiswa');
+    Route::get('/tambahkelassiswa', [KelasSiswaController::class, 'tambahkelas'])->name('tambahkelassiswa');
+    Route::post('/tambahkelassiswa', [KelasSiswaController::class, 'simpan'])->name('kelassiswa.store');
 
     // Siswa Kelas
-    Route::get('/soal/{id}', [SoalController::class, 'show'])->name('soal');
-    Route::get('/tambah/{id}', [SoalController::class, 'create'])->name('soal.crete');
+    Route::get('/soal/{id}', [SoalController::class, 'tampilsoal'])->name('soal');
+    Route::get('/tambah/{id}', [SoalController::class, 'buatsoal'])->name('soal.crete');
+    Route::post('/jumlah/{id}', [SoalController::class, 'jumlahsoal'])->name('soal.jumlah');
     Route::get('/siswasoal/{id}', [SoalController::class, 'soalSiswa'])->name('soal.siswa');
-    Route::post('/tambahsoal', [SoalController::class, 'store'])->name('soal.store');
+    Route::post('/tambahsoal', [SoalController::class, 'simpan'])->name('soal.store');
 
     // Narasi
     Route::get('/prolog/{id}', [PrologController::class, 'index'])->name('prolog');

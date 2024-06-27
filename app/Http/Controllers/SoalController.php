@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kelas;
+use App\Models\Soal;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -24,40 +25,34 @@ class SoalController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create($id)
+    public function buatsoal($id)
     {
-        return view('Guru.FormSoal', ['id'=>$id]);
+        return view('Guru.FormSoal', ['id'=>$id, 'jumlah'=>0]);
+    }
+
+    public function jumlahsoal($id,Request $request)
+    {
+        return view('Guru.FormSoal', ['id'=>$id, 'jumlah'=>$request->jmlsoal]);
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function simpan(Request $request)
     {
-        for($x = 1; $x <=5;$x++) {
-            DB::table('soal')->insert([
-                'KelasID' =>$request->id,
-                'BAB' =>$request->BAB,
-                'no_soal' =>$request->{"no_soal".$x},
-                'Soal' =>$request->{"Soal".$x},
-                'jawaban1' =>$request->{"jawaban1".$x},
-                'jawaban2' =>$request->{"jawaban2".$x},
-                'jawaban3' =>$request->{"jawaban3".$x},
-                'jawaban4' =>$request->{"jawaban4".$x},
-                'Kunci_Jawaban' =>$request->{"Kunci_Jawaban".$x},
-                'Alasan' =>$request->{"Alasan".$x},
-            ]);
+        for($x = 1; $x <=$request->jumlahsoal;$x++) {
+            Soal::SimpanSoal($request, $x);
         }
-        return redirect(route('soal',['id'=>$request->id]))->with('success', 'Kelas berhasil ditambahkan.');
+        return redirect(route('soal',['id'=>$request->id]))->with('success', 'Soal berhasil ditambahkan.');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show($id)
+    public function tampilsoal($id)
     {
-        $data = DB::table('soal')->where('KelasID',$id )->get();
-        $dataKelas = DB::table('kelas')->where('id',$id )->first();
+        $data = Soal::getDataSoalGuru(['KelasID'=>$id]);
+        $dataKelas = Kelas::getDataKelasGuruFirst($id);
         return view('Guru.soal', ['data'=>$data,'kelas'=>$dataKelas]);
     }
 
