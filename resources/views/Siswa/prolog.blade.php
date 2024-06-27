@@ -165,7 +165,7 @@
                         break;
 
                     case "16":
-                        const url = "{{ route('map',['id'=>1]) }}";
+                        const url = "{{ route('map',['id'=>$id]) }}";
                         window.location.href = url;
                         break;
 
