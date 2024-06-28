@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\KelasController;
 use App\Http\Controllers\KelasSiswaController;
+use App\Http\Controllers\MapController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SoalController;
 use App\Http\Controllers\StoryController;
@@ -51,9 +52,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/bab4/{id}', [StoryController::class, 'bab4'])->name('bab4');
     Route::get('/bab5/{id}', [StoryController::class, 'bab5'])->name('bab5');
 
-    Route::get('/map/{id}', function ($id) {
-        return view('maps', ['id' => $id]);
-    })->name('map');
+    Route::get('/map/{id}', [MapController::class, 'tampilMap'])->name('map');
+
+    // Route::get('/map/{id}', function ($id) {
+    //     return view('maps', ['id' => $id]);
+    // })->name('map');
 
     Route::get('/bab', function () {
         return view('bab');
