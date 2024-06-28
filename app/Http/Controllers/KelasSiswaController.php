@@ -37,12 +37,10 @@ class KelasSiswaController extends Controller
      */
     public function simpan(Request $request)
     {
-        $kelas = DB::table('kelas')
-                ->where('kode_kelas', $request->kode_kelas)
-                ->first();
+        $kelas = Kelas::getKelasKode($request->kode_kelas);
 
         if ($kelas && Hash::check($request->password, $kelas->password)) {
-            Kelasdetail::create([
+            Kelas::tambahkelassiswa([
                 'KelasID' => $kelas->id,
                 'SiswaID' => Auth::user()->id,
             ]);

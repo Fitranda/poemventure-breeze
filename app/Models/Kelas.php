@@ -53,4 +53,16 @@ class Kelas extends Model
                 ->get();
         return $data;
     }
+
+    public static function getKelasKode($kode){
+        $kelas = DB::table('kelas')
+                ->where('kode_kelas', $kode)
+                ->first();
+
+        return $kelas;
+    }
+
+    public static function tambahkelassiswa($param){
+        Kelasdetail::create($param);
+    }
 }
