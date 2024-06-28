@@ -52,7 +52,7 @@
 
         <div id="soal" class="hidden flex flex-col sm:justify-center items-center">
             <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
-                <form method="GET" id="formsoal" action="{{route('map',['id'=>1])}}">
+                <form method="GET" id="formsoal" action="{{route('map',['id'=>$id])}}">
                     @csrf
                     <input id="no-bag" type="text" class="hidden" value="1">
 
@@ -123,7 +123,7 @@
             </div>
         </div>
     </div>
-    
+
     @Once('scripts')
         <script>
             $(document).ready(function() {
